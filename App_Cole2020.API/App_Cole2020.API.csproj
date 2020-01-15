@@ -307,6 +307,16 @@
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\App_Cole2020.Common\App_Cole2020.Common.csproj">
+      <Project>{a0b36f26-1284-4809-ae45-52e65b1bbeca}</Project>
+      <Name>App_Cole2020.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\App_Cole2020.Domain\App_Cole2020.Domain.csproj">
+      <Project>{10c20b1c-8052-4271-b008-11d526d9ad52}</Project>
+      <Name>App_Cole2020.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

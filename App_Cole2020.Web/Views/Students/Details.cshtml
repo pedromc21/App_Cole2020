@@ -1,0 +1,89 @@
+﻿@model App_Cole2020.Common.Models.Student
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>Student</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Clave_Plantel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Clave_Plantel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Plantel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Plantel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Matricula)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Matricula)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Apellido_Paterno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Apellido_Paterno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Apellido_Materno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Apellido_Materno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombres)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombres)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nivel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nivel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Grado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Grado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Grupo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Grupo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Regresar", "Index")
+</p>

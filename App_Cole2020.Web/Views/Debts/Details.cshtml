@@ -1,0 +1,90 @@
+﻿@model App_Cole2020.Common.Models.Debt
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Debt</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Persona_Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Persona_Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdCiclo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdCiclo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Plantel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Plantel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Concepto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Concepto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Total)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Total)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Recargo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Recargo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Abono)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Abono)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Saldo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Saldo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaVencimiento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaVencimiento)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.LLaveRef }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

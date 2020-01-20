@@ -1,0 +1,105 @@
+﻿@model IEnumerable<App_Cole2020.Common.Models.Payment>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Folio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Serie_Factura)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Factura)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Importe)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descuento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Abono)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Recargo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalAbono)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaAbono)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoPago)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Banco)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Referencia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estatus)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Folio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Serie_Factura)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Factura)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Importe)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descuento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Abono)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Recargo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotalAbono)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaAbono)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoPago)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Banco)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Referencia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Estatus)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.LLaveRef_Enc }) |
+            @Html.ActionLink("Details", "Details", new { id=item.LLaveRef_Enc }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.LLaveRef_Enc })
+        </td>
+    </tr>
+}
+
+</table>

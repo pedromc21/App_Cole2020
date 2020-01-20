@@ -1,0 +1,66 @@
+﻿@model App_Cole2020.Common.Models.Tutor
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Tutor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Clave_Familia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Clave_Familia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Apellido_Paterno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Apellido_Paterno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Apellido_Materno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Apellido_Materno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombres)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombres)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Parentesco)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Parentesco)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tutor_Principal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tutor_Principal)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Tutor_Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

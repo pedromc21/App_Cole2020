@@ -1,0 +1,51 @@
+﻿@model IEnumerable<App_Cole2020.Common.Models.Group>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Student.Clave_Plantel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Clave)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NameGrupo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoGrupo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Student.Clave_Plantel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Clave)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NameGrupo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoGrupo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { Grupo_Id = item.Grupo_Id, Persona_Id = item.Persona_Id }) |
+            @Html.ActionLink("Details", "Details", new { Grupo_Id = item.Grupo_Id, Persona_Id = item.Persona_Id }) |
+            @Html.ActionLink("Delete", "Delete", new { Grupo_Id = item.Grupo_Id, Persona_Id = item.Persona_Id })
+        </td>
+    </tr>
+}
+
+</table>

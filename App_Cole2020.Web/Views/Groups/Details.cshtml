@@ -1,0 +1,50 @@
+﻿@model App_Cole2020.Common.Models.Group
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Group</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Student.Clave_Plantel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Student.Clave_Plantel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Clave)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Clave)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameGrupo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameGrupo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoGrupo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoGrupo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { Grupo_Id = Model.Grupo_Id, Persona_Id = Model.Persona_Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

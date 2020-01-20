@@ -1,0 +1,114 @@
+﻿@model IEnumerable<App_Cole2020.Common.Models.Student>
+
+@{
+    ViewBag.Title = "Hijos";
+}
+
+<h2>Index</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Clave_Plantel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Plantel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Matricula)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Apellido_Paterno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Apellido_Materno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombres)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nivel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Grado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Grupo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Clave_Plantel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Plantel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Matricula)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Apellido_Paterno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Apellido_Materno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombres)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nivel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Grado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Grupo)
+        </td>
+        <td>
+            @Html.ActionLink("Details", "Details", new { id = item.Persona_Id }) |
+            @Html.ActionLink(
+               linkText: "Grupos",
+               actionName: "Index",
+               controllerName: "Group",
+               routeValues: new
+               { PersonaId = item.Persona_Id },
+               htmlAttributes: null)
+            @Html.ActionLink(
+               linkText: "Cargos",
+               actionName: "Index",
+               controllerName: "Debt",
+               routeValues: new
+               { PersonaId = item.Persona_Id },
+               htmlAttributes: null)
+            @Html.ActionLink(
+               linkText: "Horario",
+               actionName: "Index",
+               controllerName: "Group",
+               routeValues: new
+               { PersonaId = item.Persona_Id },
+               htmlAttributes: null)
+            @Html.ActionLink(
+               linkText: "Calificaciones",
+               actionName: "Index",
+               controllerName: "Group",
+               routeValues: new
+               { PersonaId = item.Persona_Id },
+               htmlAttributes: null)
+            @Html.ActionLink(
+               linkText: "Avisos",
+               actionName: "Index",
+               controllerName: "Group",
+               routeValues: new
+               { PersonaId = item.Persona_Id },
+               htmlAttributes: null)
+        </td>
+    </tr>
+}
+
+</table>
+<p>
+    @Html.ActionLink("Regresar", "Index", "Tutors")
+</p>

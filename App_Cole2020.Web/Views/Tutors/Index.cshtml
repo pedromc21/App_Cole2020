@@ -1,0 +1,65 @@
+﻿@model IEnumerable<App_Cole2020.Common.Models.Tutor>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Tutores</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Clave_Familia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Apellido_Paterno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Apellido_Materno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombres)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Parentesco)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tutor_Principal)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Clave_Familia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Apellido_Paterno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Apellido_Materno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombres)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Parentesco)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tutor_Principal)
+        </td>
+        <td>
+            @Html.ActionLink("Details", "Details", new { id = item.Tutor_Id }) |
+            @Html.ActionLink(
+                linkText: "Sons",
+                actionName: "Index",
+                controllerName: "Students",
+                routeValues: new
+                { ClaveFamilia = item.Clave_Familia},
+                htmlAttributes: null)
+        </td>
+    </tr>
+}
+
+</table>
